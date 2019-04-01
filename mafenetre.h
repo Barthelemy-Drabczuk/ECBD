@@ -16,14 +16,16 @@ class MaFenetre : public QMainWindow {
     public slots:
         void setQuitter ();
         //void setCouleur ();
+        void setMaladie ();
 
     public :
         MaFenetre(QWidget *parent = 0);
+        QString predirMaladie (vector<QString> symptomes);
 
     private :
         QLabel *m_tra;
         vector<QLabel *> m_symptomes;
-        QPushButton *m_bou;
+        QPushButton *m_bou, *predir;
         vector<QComboBox *> m_options;
         QString couleur;
         CVString m_vet;
